@@ -1,0 +1,49 @@
+package main;
+import java.util.Scanner;
+
+
+public class Converter {
+
+	public static void main(String[] args) {
+		int menuSelection;
+		Scanner choice = new Scanner(System.in);
+		menuSelection = choice.nextInt();
+		
+		System.out.println("Which option which you like to choose?");
+		System.out.println("1. Miles to Kilometers");
+		System.out.println("2. Fahrenheit to Celsius");
+		System.out.println("3. Gallons to Liters");
+		System.out.println("4. Quit");
+		
+		Scanner units = new Scanner(System.in);
+		System.out.println("Please enter a decimal number.");
+		double convertUnits = units.nextDouble();
+
+		
+		while (menuSelection != 4)
+		{
+			 switch (menuSelection) {
+	            case 1:  menuSelection = 1;
+	            		 System.out.println("You have chosen to convert Miles to Kilometers.");
+	            		 double kilometers = convertUnits * 1.6093;
+	            		 System.out.println("The amount of miles you have provided is equivalent to " + kilometers + " kilometers.");
+	                     break;
+	            case 2:  menuSelection = 2;
+	            		 System.out.println("You have chosen to convert Fahrenheit to Celsius.");
+	            		 double celsius = (convertUnits -32)/1.8;
+	            		 System.out.println("The degrees in fahrenheit you have provided is equivalent to " + celsius + " degrees celsius.");
+	                     break;
+	            case 3:  menuSelection = 3;
+	            		 System.out.println("You have chosen to convert Gallons to Liters.");
+	            		 double gallon = convertUnits * 3.7854;
+	            		 System.out.println("The degrees in fahrenheit you have provided is equivalent to " + gallon + " degrees celsius.");
+	            		 break;
+	            case 4:  menuSelection = 4;
+	            		 System.out.println("You have chosen to quit the menu selection.");
+	                     break;
+		}
+
+	}
+
+	}
+}
